@@ -1,18 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>A Little Message For You ❤️</title>
-   <style>
-      body {text-align: center; font-family: Arial, sans-serif; background-color: pink; margin: 150px;}
-      h1 {color: red; font-size: 45px;}
-      p {font-size: 22px;}
-      button {padding: 12px 25px; font-size: 18px; border:none; border-radius: 10px; cursor: pointer;}
-   </style>
+    <title>Shedrach Luxury Hotel</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>I Love You ❤️</h1>
-    <p>You are the most amazing person I have ever met.</p>
-    <p>thank you for being in my life</p>
-    <button onclick="alert('I love you more than words can express!❤️')">Click Me</button>
+    <h1 id="top">SHEDRACH LUXURY HOTEL</h1>
+    <p>Welcome to our luxurious hotel!</p>
+    <nav>
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <img src="picture.jpeg" alt="picture" width="250" height="300"> 
+    <h1>Our Services</h1>
+    <ul>
+        <li>Free Wifi</li>
+        <li>Swimming Pool</li>
+        <li>24/7 Room Service</li>
+        <li>Restaurant</li>
+    </ul>
+    <h2>Our Rooms</h2>
+
+<div class="rooms-container">
+
+    <div class="room-card">
+        <img src="single.jpeg" alt="Single Room">
+        <h3>Single Room</h3>
+        <p>A comfortable room for one guest.</p>
+        <p class="price">₦25,000 per night</p>
+        <a href="#top">Book Now</a>
+    </div>
+
+    <div class="room-card">
+        <img src="double.jpeg" alt="Double Room">
+        <h3>Double Room</h3>
+        <p>A relaxing room for two guests.</p>
+        <p class="price">₦40,000 per night</p>
+        <a href="#top">Book Now</a>
+    </div>
+
+    <div class="room-card">
+        <img src="picture.jpeg" alt="Deluxe Room">
+        <h3>Deluxe Room</h3>
+        <p>A spacious room with extra comfort.</p>
+        <p class="price">₦60,000 per night</p>
+        <a href="#top">Book Now</a>
+    </div>
+
+    <div class="room-card">
+        <img src="picture.jpeg" alt="Suite Room">
+        <h3>Suite Room</h3>
+        <p>Enjoy a luxurious and elegant stay.</p>
+        <p class="price">₦100,000 per night</p>
+        <a href="#top">Book Now</a>
+    </div>
+
+</div>
+    <section>
+        <h2>Book a Room</h2>
+        <form onsubmit="return checkDates()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" maxlength="11" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" required>
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" min="2026-10-10" required>
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+            <label for="message">Special Requests:</label>
+            <input type="text" id="message" name="message" placeholder="Any special requests?">
+            <label for="room">Choose Your Room:</label>
+            <select id="room" name="room" required>
+                <option value="">Select a room type</option>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Suite Room</option>
+            </select>
+            <label for="payment">Choose Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="">Select a payment method</option>
+              <option value="credit">Credit Card</option>
+                <option value="debit">Debit Card</option>
+                <option value="cash">Cash</option>
+            </select>
+            <label for="Terms and Conditions">
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the Terms and Conditions
+            </label>
+            <button type="submit">Book Now</button>
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests" rows="4" cols="50" placeholder="Any special requests?"></textarea>
+        </form>
+    </section>
+    <section id="about">
+    <h2>About Shedrach Luxury Hotel</h2>
+ <p>
+        Welcome to Shedrach Luxury Hotel, where comfort,
+        luxury, and excellent service come together.
+        Our goal is to make every guest feel at home.
+    </p>
+    <p>
+        Whether you are visiting for business or relaxation,
+        we are ready to give you a comfortable and memorable stay.
+    </p>
+</section>
+    </section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <p>If you have any questions or need assistance, feel free to reach out to us:</p>
+
+    <address>
+        <p>123 Luxury Street, Lagos, Nigeria</p>
+
+        <p>
+            <a href="mailto:info@shedrachluxuryhotel.com">
+                Email: info@shedrachluxuryhotel.com
+            </a>
+        </p>
+
+        <p>
+            <a href="tel:+2349040625328">
+                Phone: +234 904 062 5328
+            </a>
+        </p>
+
+        <p>
+            <a href="https://wa.me/2349040625328" target="_blank">
+                Chat with us on WhatsApp
+            </a>
+        </p>
+
+        <p>
+            <a href="https://www.google.com/maps" target="_blank">
+                View Our Location
+            </a>
+        </p>
+    </address>
+</section>
+    <h2>Frequently Asked Questions</h2>
+
+<details>
+    <summary>What are the check-in and check-out times?</summary>
+    <p>Check-in starts at 3:00 PM, and check-out is by 11:00 AM.</p>
+</details>
+
+<details>
+    <summary>Does the hotel offer free Wi-Fi?</summary>
+    <p>Yes, free Wi-Fi is available for our guests.</p>
+</details>
+
+<details>
+    <summary>Does the hotel have a swimming pool?</summary>
+    <p>Yes, guests can enjoy our swimming pool.</p>
+</details>
+
+<details>
+    <summary>Can I cancel my booking?</summary>
+    <p>Please contact our hotel team for information about booking cancellations.</p>
+</details>
+    <h2>What Our Guests Say</h2>
+    <div>
+        <h3>john</h3>
+        <p>"I had an amazing stay at Shedrach Luxury Hotel! The staff was friendly, and the amenities were top-notch. Highly recommend!"</p>
+    </div>
+    <div>
+        <h3>mary</h3>
+        <p>"The rooms were spacious and clean, and the food at the restaurant was delicious. I will definitely be coming back!"</p>
+    </div>
+    <h2>Leave Us a Review</h2>
+
+<form>
+    <label for="guest-rating">Rate Your Stay:</label>
+    <select id="guest-rating" name="guest-rating" required>
+        <option value="">Choose a rating</option>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Good</option>
+        <option value="3">3 - Average</option>
+        <option value="2">2 - Poor</option>
+        <option value="1">1 - Very Poor</option>
+    </select>
+
+    <label for="reviewer-name">Your Name:</label>
+    <input
+        type="text"
+        id="reviewer-name"
+        name="reviewer-name"
+        placeholder="Enter your name"
+        maxlength="50"
+        required
+    >
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea
+        id="feedback"
+        name="feedback"
+        rows="4"
+        maxlength="300"
+        placeholder="Share your experience with us!"
+        required
+    ></textarea>
+
+    <button type="submit">Submit Review</button>
+    <button type="reset">Clear Form</button>
+</form>
+    <h2>Our Opening Hours</h2>
+    <table border="1">
+            <tr>
+                <th>Day</th>
+                <th>Opening Hours</th>
+            </tr>
+            <tr>
+                <td>Monday-Friday</td>
+                <td>24 hours</td>
+            </tr>
+            <tr>
+                <td>Saturday-Sunday</td>
+                <td>24 hours</td>
+            </tr>
+    </table>
+ <footer>
+    <h3>Shedrach Luxury Hotel</h3>
+
+    <p>Luxury, comfort, and excellent service.</p>
+
+    <p>&copy; 2026 Shedrach Luxury Hotel. All rights reserved.</p>
+</footer>
+    <a href="#top">Back to Top</a>
+    <script>
+function checkDates() {
+    const checkin = document.getElementById("checkin").value;
+    const checkout = document.getElementById("checkout").value;
+
+    if (!checkin || !checkout || checkout <= checkin) {
+        alert("Please choose valid check-in and check-out dates.");
+        return false;
+    }
+
+    alert("Thank you! Your booking details are ready.");
+    return false;
+}
+</script>    
 </body>
 </html>
